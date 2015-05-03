@@ -33,7 +33,7 @@ class  Handler implements Runnable{
       //      System.out.println(address.getHostAddress());
             
           //  if(address=="/127.0.0.1");
-           if( address.getHostAddress().equals("127.0.0.2"))
+           if( address.getHostAddress().equals("127.0.0.1"))
            { System.out.println(address);
                PrintWriter out =
         new PrintWriter(clisock.getOutputStream(), true);
