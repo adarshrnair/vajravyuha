@@ -29,7 +29,7 @@ class  Handler implements Runnable{
       //      System.out.println(address.getHostAddress());
             
           //  if(address=="/127.0.0.1");
-           if( address.getHostAddress().equals("127.0.0.1"))
+           if( address.getHostAddress().equals("127.0.0.2"))
            { System.out.println(address);
                PrintWriter out =
         new PrintWriter(clisock.getOutputStream(), true);
@@ -66,7 +66,7 @@ class  Handler implements Runnable{
                //  String pp= Integer.toString(i);
                  out.println(i);
                  out.flush();
-                 if(i>200000)
+                 if(i>2000000)
                  {
                      clisock.close();
                      System.out.println("Vajravyuha Closed Socket");
