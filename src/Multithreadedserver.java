@@ -46,17 +46,18 @@ class  Handler implements Runnable{
            }
      else
      {
+         int i ;
          System.out.println(address.getHostName()+ " is now trapped in VajraVyuha");
          PrintWriter out =
         new PrintWriter(clisock.getOutputStream(), true);
         /*           BufferedReader in = new BufferedReader(
         new InputStreamReader(clisock.getInputStream()));*/
          
-             for(int i=1;i>0;i++)
+             for(i=1;i>0;i++)
              {
           //       Thread.sleep(1);
                  out.write("VAJRAVYUHA GOT YOU");
-               out.write(i);
+               out.write((int) i);
                if(i%50==0)
                {   out.write("VAJRAVYUHA GOT YOU");//Thread.sleep(1000);
                }
@@ -66,7 +67,7 @@ class  Handler implements Runnable{
                //  String pp= Integer.toString(i);
                  out.println(i);
                  out.flush();
-                 if(i>2000000)
+                 if(i>2000000000)
                  {
                      clisock.close();
                      System.out.println("Vajravyuha Closed Socket");
