@@ -1,0 +1,29 @@
+
+<html>
+<head><title> welcome user</title>
+</head>
+<body>
+<?php
+
+if($mybb->user['uid'])
+{
+    // If the user if logged in, display a welcoming message.
+    echo "Welcome  ".$mybb->user['username']."!<br />";
+    echo "Thanks for logging in.";
+}
+else
+{
+    // If the user is not logged in, display the login form.
+    echo "<form action='forum/member.php' method='post'>";
+    echo "<input type='hidden' name='action' value='do_login' />";
+    echo "<input type='hidden' name='url' value='../test.php' />";
+    echo "Username: <input type='text' name='username' maxlength='30' /><br />";
+    echo "Password: <input type='password' name='password' /><br />";
+    echo "<input type='submit' name='submit' value='Login' />";
+    echo "</form>";
+}
+
+?>
+</body>
+</html>
+
