@@ -1,4 +1,0 @@
-profiles
-users
-notifications
-security
