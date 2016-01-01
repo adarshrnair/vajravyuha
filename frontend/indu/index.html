@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>VAJRAVYUHA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script type = 'text/javascript'>
+ function validate() {
+  //int a;
+        if (document.getElementById("uname").value === "") {
+            alert("User name may not be blank");
+        } else if (document.getElementById("pwd").value === "") {
+            alert("Password may not be blank.");
+        }
+      /*else if(doceument.getElementById("pwd").strlength>8){
+            alert("password should be 8 character long");
+        }*/
+        
+    }
+    
+    /*Keys                 ASCII
+
+        A – Z, a - z          65 - 90
+
+        0 - 9                 48 - 57
+
+        Num0 – Num9           96 - 105
+
+        Backspace             8 
+         */
+                
+      
+</script> 
+         <style>
+h1 {
+    border:5px solid black;
+    padding:10px;
+    margin:30px;
+    color: black;
+    background-color:white;
+}
+p {
+    border:8px  darkolivegreen inset ;
+    
+   
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 100px;
+    margin-left: 100px;
+  
+}
+nav.login {
+        line-height:30px;
+        background-color:white;
+        height:500px;
+        width:425px;
+        float:right;
+        padding:5px;
+        border:5px solid black;
+    }
+    
+    iframe{
+        height: 510px;
+        width:800px;
+        float:left;
+        
+    }
+    
+ 
+/*div {
+    width: 70%;
+    height: 400px;
+    background-image: url('WEB-INF/image(1).jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 5px solid red;
+}*/
+//p.inset {border-style: inset;}
+body{
+    background-color:darkolivegreen ;
+}
+
+
+.btn{
+    background-color: greenyellow;
+    border: 3px solid black;
+    font-family: cursive;
+    
+    font-size: larger;
+}
+
+
+
+
+
+
+
+
+</style>
+
+    </head>
+    <body>
+  
+        
+       
+       
+    <CENTER>
+        
+        <h1>INDIAN ARMY </h1><br><hr>
+        
+       
+            
+        <iframe   src="home.html" style="border:5px solid black">
+                
+        </iframe>
+        
+        
+        
+        <nav class="login"> <p> <form name="myform">
+         USERNAME :
+         <INPUT  TYPE="TEXT" VALUE=" " NAME="UNAME" id="uname"><BR><BR><BR>
+        
+        PASSWORD :
+        <INPUT TYPE="PASSWORD" VALUE="" NAME="PWD" id="pwd"><BR><BR><br>
+         
+    
+        <INPUT TYPE="SUBMIT" VALUE="   LOGIN   " NAME="LOGIN" class="btn"  onclick="validate();" />
+        
+        </form>
+         
+    </p>
+
+        </nav>
+
+
+
+<script>
+$(document).ready(function(){
+    $(".btn").click(function(){
+        $(this).button('loading');
+    });   
+});
+</script>
+
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+         
+        
+        <div> 
+        </div>
+    </CENTER>
+    </body>
+</html>
