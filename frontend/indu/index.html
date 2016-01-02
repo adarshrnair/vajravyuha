@@ -1,43 +1,48 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>VAJRAVYUHA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+
+
         <script type = 'text/javascript'>
  function validate() {
-  //int a;
-        if (document.getElementById("uname").value === "") {
-            alert("User name may not be blank");
-        } else if (document.getElementById("pwd").value === "") {
-            alert("Password may not be blank.");
+	
+  	if (document.getElementById("uname").value === " ")
+        {
+
+            alert("User name may not be blank ");
+            myform.uname.focus();
         }
-      /*else if(doceument.getElementById("pwd").strlength>8){
-            alert("password should be 8 character long");
-        }*/
+       
+	if ((document.getElementById("pwd").value === "")||(document.getElementById("pwd").value.length!=8)) {
+            alert("Password may not be blank and should be 8 character long");
+            myform.pwd.focus();
+        }
+	
+	    var re = /^[\w ]+$/;
+
+	if(!re.test(myform.uname.value)) {
+     			 alert(" username contains invalid characters!");
+     			 myform.uname.focus();
+     			 return false;
+  	 }
+	else{
+	return true;
+        
+
+	}
+
         
     }
-    
-    /*Keys                 ASCII
-
-        A – Z, a - z          65 - 90
-
-        0 - 9                 48 - 57
-
-        Num0 – Num9           96 - 105
-
-        Backspace             8 
-         */
-                
-      
 </script> 
-         <style>
+
+
+
+
+
+  <style>
 h1 {
     border:5px solid black;
     padding:10px;
@@ -73,17 +78,9 @@ nav.login {
     }
     
  
-/*div {
-    width: 70%;
-    height: 400px;
-    background-image: url('WEB-INF/image(1).jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 5px solid red;
-}*/
-//p.inset {border-style: inset;}
+
 body{
-    background-color:darkolivegreen ;
+    background-image: url(cs.png) ;
 }
 
 
@@ -95,16 +92,12 @@ body{
     font-size: larger;
 }
 
-
-
-
-
-
-
-
 </style>
 
     </head>
+
+
+
     <body>
   
         
@@ -122,7 +115,7 @@ body{
         
         
         
-        <nav class="login"> <p> <form name="myform">
+        <nav class="login"> <p> <form name="myform" action="adminprofile.html">
          USERNAME :
          <INPUT  TYPE="TEXT" VALUE=" " NAME="UNAME" id="uname"><BR><BR><BR>
         
@@ -148,20 +141,7 @@ $(document).ready(function(){
 });
 </script>
 
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-         
         
-        <div> 
-        </div>
     </CENTER>
     </body>
 </html>
