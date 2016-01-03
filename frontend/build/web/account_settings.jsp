@@ -21,6 +21,15 @@
         }
     </style>
 </head>
+  <%
+         if(session.getAttribute("admin")==null || session.getAttribute("admin") == "" || session.getAttribute("admin") == " " )
+         {
+             response.sendRedirect("caught.jsp");
+         }
+         else
+         {
+             
+         %>
 <body>
 <center>
     <div id="bor">
@@ -28,13 +37,13 @@
 <button type="button" class="button info large" style="background-color:black">
     <i class="fi-torsos"></i><a href="user.jsp"> Users </a>
   </button>
-
+<a href="user.jsp"> Users </a>
 
   <button type="button" class="button info large" style="background-color:darkolivegreen">
       
       <i class="fi-play-video" ></i> <a href="profile.jsp">Profile</a>
   </button>
-
+<a href="profile.jsp">Profile</a>
 
   <button type="button" class="button info large" style="background-color:black">
     <i class="fi-info"></i> Notifications
@@ -49,4 +58,7 @@
 
 
 </body>
+<%
+         }
+             %>
 </html>

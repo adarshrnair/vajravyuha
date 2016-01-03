@@ -71,11 +71,12 @@
         {
             %>
             
-            
-                
+            <script>
+                alert("SOMETHING WENT WRONG !!!");
+                </script>
             
             <%
-            response.sendRedirect("error.html");
+            
         }
         else
         {
@@ -106,7 +107,7 @@
    message.setText("It is found that someone has logged in to your profile which is secured by Vajravyuha. Kindly report if it is not you.");  
      
    //send message  
-   Transport.send(message);  
+  // Transport.send(message);  
   
    System.out.println("message sent successfully");  
    
