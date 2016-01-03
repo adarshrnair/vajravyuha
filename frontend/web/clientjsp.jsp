@@ -50,6 +50,7 @@
           int j=0;
           try
         {
+            
             String str;
             Socket s = new Socket("localhost",3333);
        //     s.bind(new InetSocketAddress(5555));
