@@ -11,6 +11,7 @@
      
     <center>
   <%  session.setAttribute("admin","");
+  //session.setAttribute("admin","");
             session.invalidate();
            // session.getAttribute("user");
        

@@ -26,13 +26,13 @@
     <div id="bor">
 <div style="padding:20px;" >
 <button type="button" class="button info large" style="background-color:black">
-    <i class="fi-torsos"></i><a href="user.html"> Users </a>
+    <i class="fi-torsos"></i><a href="user.jsp"> Users </a>
   </button>
 
 
   <button type="button" class="button info large" style="background-color:darkolivegreen">
       
-      <i class="fi-play-video" ></i> <a href="profile.html">Profile</a>
+      <i class="fi-play-video" ></i> <a href="profile.jsp">Profile</a>
   </button>
 
 
