@@ -45,7 +45,7 @@
             String user=request.getParameter("UNAME");
           //  System.out.
             pwd=request.getParameter("PWD");
-            System.out.println(pwd);
+           // System.out.println(pwd);
             ps=con.prepareStatement("Select * from admins where uname=?");
             ps.setString(1, user);
       
