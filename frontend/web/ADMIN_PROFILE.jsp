@@ -10,7 +10,15 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-  
+  <%
+         if(session.getAttribute("admin")==null || session.getAttribute("admin") == "" || session.getAttribute("admin") == " " )
+         {
+             response.sendRedirect("caught.jsp");
+         }
+         else
+         {
+             
+         %>
   
 
 
@@ -77,13 +85,13 @@ li a:hover {
 <body>
     <ul>
 
-        <li><a href="account_settings.html" target="iframe_a">
+        <li><a href="account_settings.jsp" target="iframe_a">
         <i class="fi-wrench" style="font-size:15px"></i> ACCOUNT SETTINGS</a></li>
-  <li><a href="log.html" target="iframe_a">LOG</a></li>
+  <li><a href="log.jsp" target="iframe_a">LOG</a></li>
   
- <li><a href="Gallery.html" target="iframe_a"> GALLERY</a></li>
+ <li><a href="Gallery.jsp" target="iframe_a"> GALLERY</a></li>
   
-        <li class="" ><a href="logout.html">
+        <li class="" ><a href="logout.jsp">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   LOGOUT <i class="fi-power" style="color:white"></i></a></li>
     </ul>
     <div id="sam" >
@@ -94,4 +102,7 @@ li a:hover {
 <iframe width="100%" height="500px" name="iframe_a"></iframe>
 
 </body>
+<%
+         }
+%>
 </html>

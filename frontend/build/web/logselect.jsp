@@ -61,7 +61,7 @@
             if(s1.equals(user) && s2.equals(pwd))
             {
                 p++;
-                session.setAttribute("user", user);
+                session.setAttribute("admin", user);
          //       response.sendRedirect("welcome.jsp");
                 
              //   break;
@@ -111,7 +111,7 @@
    System.out.println("message sent successfully");  
    
   } catch (MessagingException e) {throw new RuntimeException(e);}     
-            response.sendRedirect("ADMIN_PROFILE.html");
+            response.sendRedirect("ADMIN_PROFILE.jsp");
         }
           
             

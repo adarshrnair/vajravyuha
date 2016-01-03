@@ -10,7 +10,13 @@
 <body>
      
     <center>
- <i class="fi-alert"></i> ABC
+  <%  session.setAttribute("admin","");
+            session.invalidate();
+           // session.getAttribute("user");
+       
+        %>
+        <h1>LOGGED OUT SUCCESSFULLY... </h1>
+        <p><a href="index.html">Click here to Log in !!</a></p>
         
     </center>
 
