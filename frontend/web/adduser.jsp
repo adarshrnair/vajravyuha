@@ -39,16 +39,27 @@
     String pass=sb.toString();
     String email=request.getParameter("txt2");
     String phone=request.getParameter("txt3");
-    if(request.getParameter("chk2").equals("1"))
+   //quest.getP
+    if(request.getParameter("chk2")==null)
      //   if(request.)
-    E=request.getParameter("chk2");
-    if(request.getParameter("chk3").equals("1"))
-    W=request.getParameter("chk3");
-    if(request.getParameter("chk4").equals("1"))
-    A=request.getParameter("chk4");
-    if(request.getParameter("chk1").equals("1"))
-    R=request.getParameter("chk1");
+    E="0";
     
+   else
+        E="1";
+    if(request.getParameter("chk3")==null)
+    W="0";
+    else
+        W="1";
+    if(request.getParameter("chk4")==null)
+    A="0";
+    else
+        A="1";
+   if(request.getParameter("chk1")==null)
+    R="0";
+   else
+       R="1";
+    
+   
     
     if(A.equals("0"))
     {
@@ -67,8 +78,9 @@
             %>
             <script>
                 alert("Successfully Registered, You can now log in");
-                String to=email;//change accordingly  
-  /*
+                </script>
+         <%       String to=email;//change accordingly  
+  
   //Get the session object  
   Properties props = new Properties();  
   props.put("mail.smtp.host", "smtp.gmail.com");  
@@ -91,7 +103,7 @@
    message.setFrom(new InternetAddress("r.adarsh1994@gmail.com"));//change accordingly  
    message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));  
    message.setSubject("REGISTERED");  
-   String msg = "You are not made a member of site protected by Vajravyuha. You Username is "+user+" and password is "+pass+". Please change password after login";
+   String msg = "You are now made a member of site protected by Vajravyuha. You Username is "+user+" and password is "+pass+". Please change password after login";
    message.setText(msg);  
      
    //send message  
@@ -99,9 +111,9 @@
   
    System.out.println("message sent successfully");  
    
-  } catch (MessagingException e) {throw new RuntimeException(e);}  */
-            </script>
-            <%
+  } catch (MessagingException e) {throw new RuntimeException(e);}  
+            
+            
             response.sendRedirect("ADMIN_PROFILE.jsp");
         }
         else
@@ -130,8 +142,9 @@
             %>
             <script>
                 alert("Successfully Registered, You can now log in");
-                String to=email;//change accordingly  
-  /*
+                </script>
+       <%         String to=email;//change accordingly  
+  
   //Get the session object  
   Properties props = new Properties();  
   props.put("mail.smtp.host", "smtp.gmail.com");  
@@ -154,7 +167,7 @@
    message.setFrom(new InternetAddress("r.adarsh1994@gmail.com"));//change accordingly  
    message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));  
    message.setSubject("REGISTERED");  
-   String msg = "You are not made an Admin of site protected by Vajravyuha. You Username is "+user+" and password is "+pass+". Please change password after login";
+   String msg = "You are now made an Admin of site protected by Vajravyuha. You Username is "+user+" and password is "+pass+". Please change password after login";
    message.setText(msg);  
      
    //send message  
@@ -162,9 +175,9 @@
   
    System.out.println("message sent successfully");  
    
-  } catch (MessagingException e) {throw new RuntimeException(e);}*/
-            </script>
-            <%
+  } catch (MessagingException e) {throw new RuntimeException(e);}
+            
+            
             response.sendRedirect("ADMIN_PROFILE.jsp");
         }
         else
