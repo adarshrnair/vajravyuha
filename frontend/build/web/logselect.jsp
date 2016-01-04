@@ -4,8 +4,10 @@
     Author     : r.adarsh1994
 --%>
 
+<%@page import="java.text.DateFormat"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.util.*"%>
+<%@page import="java.util.Date"%>
 <%@page import="javax.mail.*"%>
 <%@page import="javax.mail.internet.*"%>
 <%@page import="java.io.InputStreamReader"%>
@@ -32,6 +34,27 @@
           </br><%= request.getRemoteAddr() %>
           <h2>Please wait .... </h2>
           <%
+String title = "Locale Specific Dates";
+String rmtaddr=request.getRemoteAddr();
+//Get the client's Locale
+Locale locale = request.getLocale( );
+String date = DateFormat.getDateTimeInstance( DateFormat.FULL,DateFormat.SHORT,locale).format(new Date( ));
+%>
+<%
+Connection conn=DriverManager.getConnection("jdbc:derby://localhost:1527/VAJRA", "superuser", "superuser");
+        PreparedStatement ps1=null;
+        ResultSet rs1=null;
+        int p1=0;
+        
+        ps1=conn.prepareStatement("Insert into logs values(?,?)");
+        ps1.setString(1, date);
+        ps1.setString(2, rmtaddr);
+        
+        
+        p1=ps1.executeUpdate();
+        %>
+          <%
+          
           int i=0;
           int j=0;
           try

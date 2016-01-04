@@ -1,3 +1,4 @@
+<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,9 +32,37 @@
         
     </style>
 </head>
+  <%
+         if(session.getAttribute("admin")==null || session.getAttribute("admin") == "" || session.getAttribute("admin") == " " )
+         {
+             response.sendRedirect("caught.jsp");
+         }
+         else
+         {
+             
+         %>
 <body><center>
     <fieldset >
-        <legend>  Adminname </legend><br><br>
+        <legend> <% 
+             String s = session.getAttribute("admin").toString();
+        Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/VAJRA", "superuser", "superuser");
+            PreparedStatement ps=null;
+            ResultSet rs=null;
+            ps=con.prepareStatement("Select * from admins where uname=?");
+            ps.setString(1, s);
+      
+        rs=ps.executeQuery();
+         while(rs.next())
+        {
+             String s1=rs.getString(3);
+             %>
+             <%=s1%>
+            
+             <%
+        }
+        %>
+        
+             </legend><br><br>
         <img src="765-default-avatar.png"  width="100" height="100">
     <form>
         <table><tr><td>
@@ -55,4 +84,7 @@
     </center>
     
 </body>
+<%
+         }
+             %>
 </html>

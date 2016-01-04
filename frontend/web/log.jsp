@@ -1,3 +1,6 @@
+
+<%@page import="java.sql.*"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,18 +17,53 @@
     </style>
     
 </head>
+ <%
+         if(session.getAttribute("admin")==null || session.getAttribute("admin") == "" || session.getAttribute("admin") == " " )
+         {
+             response.sendRedirect("caught.jsp");
+         }
+         else
+         {
+             
+         %>
 <body><center>
     <fieldset >
         <legend>  Log History </legend><br><br>
     <form>
+        <%
+         Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/VAJRA", "superuser", "superuser");
+        PreparedStatement ps=null;
+        PreparedStatement ps1=null;
+        ResultSet rs=null;
+        int p=0;
+    
+         
+  %>
         <table border="1" border-color:"darkolivegreen">
             <tr>
                 <td> Time </td>
                 <td> Source IP</td>
-                <td> MAC Address</td>
-                <td> Website</td>
+                
             </tr>
-            
+            <%
+             ps=con.prepareStatement("select * from logs");
+             
+             ResultSet rs1=ps.executeQuery();
+             while(rs1.next())
+             {
+             %>
+             
+             
+                   
+                     <tr>
+                         <td><%=rs1.getString(1)%></td>
+                         <td> 
+                         <%=rs1.getString(2)%>
+                         
+                         </td>
+                         <%}%>
+                         
+                     </tr>
             
             
         </table>
@@ -35,4 +73,7 @@
     </center>
     
 </body>
+<%
+         }
+             %>
 </html>
