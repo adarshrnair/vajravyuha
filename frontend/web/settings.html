@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+<head>
+    <title>settings</title>
+    <script type="text/javascript">
+function matchpass(){
+var t3=document.f1.t3.value;
+var t4=document.f1.t4.value;
+
+if(t3==t4){
+return true;
+}
+else{
+alert("password must be same!");
+return false;
+}
+}
+</script>
+
+    </head>
+    <body><br>
+<center>
+<font color="black">
+<h><font color="darkolivegreen">Change Password</font></h>
+
+<form name="f1" action="file:///C:/Users/aakhi/Desktop/newuser/userpro.html" onsubmit="return matchpass()">
+
+    <table>
+    <tr>
+        <td>Username :</td><td><input type="text" name="t1" id="t1"></td></tr><br>
+    <tr><td>Current Password :</td><td><input type="password" name="t2" id="t2"></td></tr><br>
+    <tr><td>New Password :</td><td><input type="text" name="t3" id="t3"></td></tr><br>
+    <tr><td>Confirm New Password :</td><td><input type="text" name="t4" id="t4"></td></tr></table>
+
+             
+
+<br>
+<button type="button" class="button-success"> Change</button>
+    <button type="button" class="button-success"> Cancel</button>
+</form 
+</center>
+    </body>
+</html>
