@@ -36,8 +36,8 @@ class  Handler implements Runnable{
  /*   BufferedReader in = new BufferedReader(
         new InputStreamReader(clisock.getInputStream()));*/
     //out.println("Hello You are IN");
-     out.write("Hello You are IN"); out.flush();
-      out.write("Hello You are IN"); out.flush();
+     out.write("IN"); out.flush();
+      out.write("IN"); out.flush();
     /* while ((str = in.readLine()) != null) {
         str="from server"+str;
         out.println(str);

@@ -92,6 +92,24 @@ Connection conn=DriverManager.getConnection("jdbc:derby://localhost:1527/VAJRA",
         }
         if(p==0)
         {
+            ps=con.prepareStatement("Select * from users where uname=?");
+            while(rs.next())
+        {
+            String s1=rs.getString(1);
+            System.out.println(s1);
+            String s2=rs.getString(2);
+            System.out.println(s2);
+            email=rs.getString(4);
+            System.out.println(email);
+            if(s1.equals(user) && s2.equals(pwd))
+            {
+                p++;
+                session.setAttribute("user", user);
+         //       response.sendRedirect("welcome.jsp");
+                
+             //   break;
+            }
+        }
             %>
             
             <script>

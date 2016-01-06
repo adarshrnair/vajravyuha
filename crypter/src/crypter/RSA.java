@@ -72,7 +72,7 @@ public class RSA
     {
         return (new BigInteger(message)).modPow(e, N).toByteArray();
     }
- 
+ //e-> public ; d-> private
     // Decrypt message
     public byte[] decrypt(byte[] message)
     {

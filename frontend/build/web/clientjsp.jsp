@@ -17,6 +17,7 @@
         <script>
             function hello()
             {
+                
                 window.open(
 'clientjsp.jsp?u1=&p1=',
 '_blank' // <- This is what makes it open in a new window.
@@ -25,6 +26,9 @@
             }
             function hello1()
             {
+                var xmlDoc=new XML();
+                xmlDoc.load("BL.xml");
+                //document.write(xmlDoc.body);
                 window.open(
 'IMG-20150814-WA0043.jpg',
 '_blank' // <- This is what makes it open in a new window.
@@ -80,7 +84,17 @@
             }        
                 if(i>0)
                 {
-                    
+                    if(i%100==0)
+                    {
+                        %>
+                
+                <p id="demo">
+                     </p>
+                <script>
+               hello1.call(); 
+               </script>
+                    <%
+                    }
                 %>
                 
                 <p id="demo">
