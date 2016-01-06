@@ -32,8 +32,8 @@
     
       <section class="top-bar-section">
     <ul class="left">
-        <li class="active"><a href="home1.html">Home</a></li>
-        <li> <a href="contact.html"> Contact Details </a></li>
+        <li class="active"><a href="home1.jsp">Home</a></li>
+        <li> <a href="contact.jsp"> Contact Details </a></li>
       
     </ul>
   </section>
