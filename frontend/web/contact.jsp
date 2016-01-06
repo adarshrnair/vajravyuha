@@ -49,6 +49,7 @@
    
     <form>
         <h><font color="darkolivegreen" size= 5px><b>Contact Details</b></font></h>
+        <fieldset>
         <table style="width:700px;height:500px"><tr><td>
             <b> For the purpose of:</b><br><br>
             (a) Message to The COAS<br>
@@ -64,6 +65,7 @@
             Email Address : webmaster.indianarmy@nic.in<br>
 </td></tr>
         </table>
+        </fieldset>
         
     </form>
     

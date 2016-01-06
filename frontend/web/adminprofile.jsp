@@ -79,7 +79,7 @@ li a:hover {
 
         <li><a href="account_settings.html" target="iframe_a">
         <i class="fi-wrench" style="font-size:15px"></i> ACCOUNT SETTINGS</a></li>
-  <li><a href="log.html" target="iframe_a">LOG</a></li>
+        <li><a href="log.jsp" target="iframe_a">LOG</a></li>
   
  <li><a href="Gallery.html" target="iframe_a"> GALLERY</a></li>
   <li><a href="#Messages">MESSAGES &#9662;</a>
@@ -90,7 +90,7 @@ li a:hover {
                 <li><a href="#">--- new message ---</a></li>
             </ul>
         </li>
-        <li class="" ><a href="logout.html">
+        <li class="" ><a href="logout.jsp">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   LOGOUT <i class="fi-power" style="color:white"></i></a></li>
     </ul>
     <div id="sam" >
