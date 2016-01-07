@@ -17,12 +17,11 @@
 
 <style>
     
-    #sam{
+   /* #sam{
         background-image: url(imgg.png);
-        background-size: auto;
-        
+        background-size: cover;
         height: 100px;
-    }
+    }*/
     
     
     
@@ -71,12 +70,14 @@ li a:hover {
     #back1
     {
         background-color: black;
-        background-size: auto;
+        background-size:auto;
         height: 100px;
     }
-    bacc{
-        background-image: url(img22.png);
-        background-size: auto;
+    body{
+        background-image: url(imgg.png);
+        background-size:contain;
+        background-repeat: round;
+        
     }
 
     
@@ -87,29 +88,20 @@ li a:hover {
 <body>
     
     <!--<FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;" style="align:right; background-color:black; color:white"></FORM>-->
-    
+    <center>
     <ul>
 
-        <li><a href="view.html" target="iframe_a">
-        <i class="fi-wrench" style="font-size:15px"></i> VIEW</a></li>
+        <li>
+            <i class="fi-wrench" style="font-size:15px"></i><a href="view.html" target="iframe_a"> VIEW</a></li>
         <li><a href="edit.html" target="iframe_a">EDIT</a></li>
         <li><a href="add.html" target="iframe_a">ADD</a></li>
         <li><a target="iframe_a">CHANGE PASSWORD</a></li>
        <li class="" style="align:right" ><a href="">
              LOGOUT <i class="fi-power" style="color:white"></i></a></li>
         <li>
-    </ul>
-    
-    <div id="sam">
-        <h> pic here</h>
-        
-    </div>
-    <div id="bacc">
-    <center>
-<iframe width="500px" height="500px" name="iframe_a"></iframe>
-    <div id="back1">
-    h/div>
+    </ul><br>
+    <iframe width="600px" height="500px" name="iframe_a"></iframe>
 </center>
-    </div>
+    
 </body>
 </html>
